@@ -337,6 +337,9 @@ $salary = 300000;
 
 // Sample if
 
+
+
+
 // Without circle braces
 
 // Sample if-else
