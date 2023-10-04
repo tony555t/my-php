@@ -347,6 +347,9 @@ $salary = 300000;
 
 // if OR
 
+
+
+
 // Ternary if
 
 // Short ternary
