@@ -233,6 +233,7 @@ class Saccos{
 }
 //instancess creation
 $sc1= new saccos("rembo","kiambu","green");
+//using the arrow function to call object method
 $sc1->setOwner('kevin mwangi');
 
 // $sc1->name='twin star';
