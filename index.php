@@ -5,7 +5,7 @@ class Person {
    private $age;
     
     
-     public function  __constructer($name,$surname)
+     public function  __construct($name,$surname)
  {
        $this->name=$name;
        $this->surname=$surname;
@@ -46,7 +46,7 @@ class Car {
     public $price;
     private $condition;
 
-    public function vehicle($name,$color,$price)
+    public function ___construct($name,$color,$price)
 
 {
       $this->name=$name;
@@ -67,6 +67,9 @@ class Car {
 //Setting properties
 $c1 =new Car ('mazda','blue','3000usd');
 $c1->setCondition('mid');
+echo '<pre>';
+var_dump($c1);
+echo '</pre>';
 
 // $c1->name = "toyota";
 // $c1->color = "blue";
@@ -88,7 +91,7 @@ class Course {
   private $adm_no;
   
 
-    public function __constructer($name,$duration,$fees)
+    public function __construct($name,$duration,$fees)
 {
        $this->name=$name;
         $this->duration=$duration;
@@ -102,7 +105,10 @@ class Course {
     }
     // create an instant
      $l1 = new Course('ui/ux','6months',100000);
-   $li->setAdm_no(7865);
+   $l1->setAdm_no(7865);
+   echo "<pre>";
+   var_dump($l1);
+   echo "</pre>";
 
 //     $l1->name="php programming";
 //     $l1->duration ="6 months ";
@@ -122,7 +128,7 @@ class Course {
   private $health_status;
 
 
-    public function __constructor($name,$color,$age)
+    public function __construct($name,$color,$age)
 {
          $this->name=$name;
           $this->color=$color;
@@ -134,8 +140,11 @@ public  function setHealth_status($health_status)
 }
  }
 //create an instance 
-$an1=new Animal('cat','brown','2yr');
+$an1=new Animal('cat','brown',2);
 $an1->setHealth_status('sick');
+echo'<pre>';
+var_dump($an1);
+echo'</pre>';
 // $an1->color='brown:';
 // $an1->age=7;
 
@@ -154,7 +163,7 @@ class Hotel{
     public $capacity ;
    private $no_employee;
 
-    public function __constructor($name,$location,$capacity)
+    public function __construct($name,$location,$capacity)
 {
          $this->name=$name;
           $this->location=$location;
@@ -167,8 +176,11 @@ class Hotel{
 
 }
 //create an instance 
-$h1=new hotel('utali','thika', 100);
+$h1=new Hotel('utali','thika', 100);
 $h1->setNo_employee(35);
+echo'<pre>';
+var_dump($h1);
+echo'</pre>';
 
 // $h1->location='Nairobi';
 // $h1->capacity="30";
@@ -199,9 +211,9 @@ private $no_teachers;
 }
 $s = new School("lenana",'kiambu', 1200);
 $s->setNo_teachers('20');
-// echo '<pre>';
-// var_dump($p);
-// echo '</pre>';
+echo '<pre>';
+ var_dump($s);
+echo '</pre>';
 // ;$s2 = new School( "kahawa",'juja',1500);
 
 
@@ -235,6 +247,9 @@ class Saccos{
 $sc1= new saccos("rembo","kiambu","green");
 //using the arrow function to call object method
 $sc1->setOwner('kevin mwangi');
+echo'<pre>';
+var_dump($sc1);
+echo'</pre>';
 
 // $sc1->name='twin star';
 // $sc1->route='kabete';
@@ -312,7 +327,7 @@ class  Movie{
     public $name;
     public $category;
     public $views;
-    private $finance;
+private $finance;
 
    public function __construct($name,$category,$views)
    {
@@ -326,7 +341,7 @@ class  Movie{
    {
         $this->finance=$finance;
    }
-
+    
     }
 
 $m=new Movie("avengers:endgame","action","96 million",);
@@ -341,3 +356,31 @@ echo '</pre>';
 // $m2->name ="mission imposible";
 // $m2->category='action';
 // $m2->views="70 million";
+
+
+
+class drinks{
+     
+    public $tea;
+    public $cofee;
+    public $porridge;
+  private $ingredients;
+
+
+
+public function __construct($tea,$cofee,$porridge)
+{
+    $this->tea=$tea;
+    $this->cofee=$cofee;
+    $this->porridge=$porridge;
+}
+    public function setIngredients($ingredients){
+
+
+        $this->ingredients=$ingredients;
+    
+}
+}
+
+$d=new drinks('tea','cofee','porridge');
+$d->setIngredients('water','leaves');
