@@ -13,11 +13,19 @@ class Person {
 public function setAge($age){
         $this->age=$age;
     }
+    public function getAge(){
+
+        return $this->age;
+    }
 }
 
  //Creating a new instance/object
  $p1 = new Person('antony','tula');
  $p1->setAge(30);
+ echo'<pre>';
+ var_dump($p1);
+ echo '</pre>';
+ echo $p1->getAge();
 
 // // Setting properties
 // $p1->name = "Alice";
@@ -46,12 +54,12 @@ class Car {
     public $price;
     private $condition;
 
-    public function ___construct($name,$color,$price)
+    public function __construct($name,$color,$price)
 
 {
       $this->name=$name;
       $this->color=$color;
-      $price->price=$price;
+      $this->price=$price;
 
     }
 
@@ -61,15 +69,19 @@ class Car {
    {
      $this->condition=$condition;
   }
+  public function getCondition(){
+     return  $this->condition;
+  }
 }
 
 // 
 //Setting properties
-$c1 =new Car ('mazda','blue','3000usd');
+$c1 =new Car ('mazda','blue',3000);
 $c1->setCondition('mid');
 echo '<pre>';
 var_dump($c1);
 echo '</pre>';
+echo $c1->getCondition();
 
 // $c1->name = "toyota";
 // $c1->color = "blue";
@@ -102,6 +114,9 @@ class Course {
     
    $this->adm_no=$adm_no;
 }
+public function getAdm_no(){
+    return $this ->adm_no;
+}
     }
     // create an instant
      $l1 = new Course('ui/ux','6months',100000);
@@ -109,6 +124,7 @@ class Course {
    echo "<pre>";
    var_dump($l1);
    echo "</pre>";
+   echo $l1->getAdm_no();
 
 //     $l1->name="php programming";
 //     $l1->duration ="6 months ";
@@ -138,6 +154,9 @@ public  function setHealth_status($health_status)
 {
     $this->health_status=$health_status;
 }
+public function getHealth_status(){
+     return $this->health_status;
+}
  }
 //create an instance 
 $an1=new Animal('cat','brown',2);
@@ -145,6 +164,7 @@ $an1->setHealth_status('sick');
 echo'<pre>';
 var_dump($an1);
 echo'</pre>';
+echo $an1->getHealth_status(); 
 // $an1->color='brown:';
 // $an1->age=7;
 
@@ -163,7 +183,7 @@ class Hotel{
     public $capacity ;
    private $no_employee;
 
-    public function __construct($name,$location,$capacity)
+public function __construct($name,$location,$capacity)
 {
          $this->name=$name;
           $this->location=$location;
@@ -173,6 +193,9 @@ class Hotel{
  {
     $this->no_employee = $no_employee;
  }
+ public function getNo_employee(){
+    return $this->no_employee;
+ }
 
 }
 //create an instance 
@@ -181,6 +204,7 @@ $h1->setNo_employee(35);
 echo'<pre>';
 var_dump($h1);
 echo'</pre>';
+echo $h1->getNo_employee();
 
 // $h1->location='Nairobi';
 // $h1->capacity="30";
@@ -208,12 +232,16 @@ private $no_teachers;
    $this->no_teachers=$no_teachers;
 
  }
+public function getNo_teachers(){
+    return $this->no_teachers;
+}
 }
 $s = new School("lenana",'kiambu', 1200);
 $s->setNo_teachers('20');
 echo '<pre>';
  var_dump($s);
 echo '</pre>';
+echo $s->getNo_teachers();
 // ;$s2 = new School( "kahawa",'juja',1500);
 
 
