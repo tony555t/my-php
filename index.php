@@ -283,7 +283,7 @@ echo'</br>';
 // $ip->year_of_release = "2018";
 
 // $ip2=new Iphone();
-// $ip2->name='iphone 12';
+$ip2->name='iphone 12';
 // $ip2->year_of_release ='2021';
 
 // $ip3= new iphone();
