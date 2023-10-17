@@ -2,6 +2,7 @@
 require_once "Person.php";
 require_once "Car.php";
 require_once "Course.php";
+require_once "Student.php";
 // class Person {
 //     public  $name;
 //      public $surname;
@@ -25,30 +26,30 @@ require_once "Course.php";
 // }
 
  //Creating a new instance/object
- $p1 = new Person('antony','tula');
- $p1->setAge(1);
- echo'<pre>';
- var_dump($p1);
- echo '</pre>';
- echo $p1->getAge();
- $p2 =new   person('john','doe');
- echo'<pre>';
- var_dump($p2);
- echo '</pre>';
+//  $p1 = new Person('antony','tula');
+//  $p1->setAge(1);
+//  echo'<pre>';
+//  var_dump($p1);
+//  echo '</pre>';
+//  echo $p1->getAge();
+//  $p2 =new   person('john','doe');
+//  echo'<pre>';
+//  var_dump($p2);
+//  echo '</pre>';
 
- //Creating a new instance/object
- $p3= new Person('santan','dave');
- $p3->setAge(1);
- echo'<pre>';
- var_dump($p3);
- echo '</pre>';
- //echo $p4->getAge();
- $p4 =new   person('john','doe');
- $p4->setAge(1);
- echo'<pre>';
- var_dump($p4);
- echo '</pre>';
- echo Person::getCounter();
+//  //Creating a new instance/object
+//  $p3= new Person('santan','dave');
+//  $p3->setAge(1);
+//  echo'<pre>';
+//  var_dump($p3);
+//  echo '</pre>';
+//  //echo $p4->getAge();
+//  $p4 =new   person('john','doe');
+//  $p4->setAge(1);
+//  echo'<pre>';
+//  var_dump($p4);
+//  echo '</pre>';
+//  echo Person::getCounter();
 
 // // Setting properties
 // $p1->name = "Alice";
@@ -141,6 +142,13 @@ echo $c1->getCondition();
 //     return $this ->adm_no;
 // }
 //     }
+
+// creating an instant of student
+$student=new Student("antony","tulla","7865");
+echo '<pre>';
+var_dump($student);
+echo '</pre>';
+
     // create an instant
      $l1 = new Course('ui/ux','6months',100000);
    $l1->setAdm_no(7865);
