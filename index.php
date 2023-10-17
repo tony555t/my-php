@@ -1,31 +1,54 @@
 <?php
-class Person {
-    public $name;
-     public $surname;
-   private $age;
+require_once "Person.php";
+require_once "Car.php";
+require_once "Course.php";
+// class Person {
+//     public  $name;
+//      public $surname;
+//    private $age;
+//      public static $counter = 0;
     
     
-     public function  __construct($name,$surname)
- {
-       $this->name=$name;
-       $this->surname=$surname;
-      }
-public function setAge($age){
-        $this->age=$age;
-    }
-    public function getAge(){
+//      public function  __construct($name,$surname)
+//  {
+//        $this->name=$name;
+//        $this->surname=$surname;
+//        self::$counter++;
+//       }
+// public function setAge($age){
+//         $this->age=$age;
+//     }
+//     public function getAge(){
 
-        return $this->age;
-    }
-}
+//         return $this->age;
+//     }
+// }
 
  //Creating a new instance/object
  $p1 = new Person('antony','tula');
- $p1->setAge(30);
+ $p1->setAge(1);
  echo'<pre>';
  var_dump($p1);
  echo '</pre>';
  echo $p1->getAge();
+ $p2 =new   person('john','doe');
+ echo'<pre>';
+ var_dump($p2);
+ echo '</pre>';
+
+ //Creating a new instance/object
+ $p3= new Person('santan','dave');
+ $p3->setAge(1);
+ echo'<pre>';
+ var_dump($p3);
+ echo '</pre>';
+ //echo $p4->getAge();
+ $p4 =new   person('john','doe');
+ $p4->setAge(1);
+ echo'<pre>';
+ var_dump($p4);
+ echo '</pre>';
+ echo Person::getCounter();
 
 // // Setting properties
 // $p1->name = "Alice";
@@ -48,31 +71,31 @@ public function setAge($age){
 
 
 
-class Car {
-    public $name;
-    public $color;
-    public $price;
-    private $condition;
+// class Car {
+//     public $name;
+//     public $color;
+//     public $price;
+//     private $condition;
 
-    public function __construct($name,$color,$price)
+//     public function __construct($name,$color,$price)
 
-{
-      $this->name=$name;
-      $this->color=$color;
-      $this->price=$price;
+// {
+//       $this->name=$name;
+//       $this->color=$color;
+//       $this->price=$price;
 
-    }
+//     }
 
 
-   public function setCondition($condition)
+//    public function setCondition($condition)
    
-   {
-     $this->condition=$condition;
-  }
-  public function getCondition(){
-     return  $this->condition;
-  }
-}
+//    {
+//      $this->condition=$condition;
+//   }
+//   public function getCondition(){
+//      return  $this->condition;
+//   }
+// }
 
 // 
 //Setting properties
@@ -96,28 +119,28 @@ echo $c1->getCondition();
 // echo '<br>'. $c2->vehicle()."<br>";
 
 
-class Course { 
-    public $name;
-    public $duration;
-    public $fees;
-  private $adm_no;
+// class Course { 
+//     public $name;
+//     public $duration;
+//     public $fees;
+//   private $adm_no;
   
 
-    public function __construct($name,$duration,$fees)
-{
-       $this->name=$name;
-        $this->duration=$duration;
-        $this->fees=$fees;
-    }
- public function setAdm_no($adm_no)
-{
+//     public function __construct($name,$duration,$fees)
+// {
+//        $this->name=$name;
+//         $this->duration=$duration;
+//         $this->fees=$fees;
+//     }
+//  public function setAdm_no($adm_no)
+// {
     
-   $this->adm_no=$adm_no;
-}
-public function getAdm_no(){
-    return $this ->adm_no;
-}
-    }
+//    $this->adm_no=$adm_no;
+// }
+// public function getAdm_no(){
+//     return $this ->adm_no;
+// }
+//     }
     // create an instant
      $l1 = new Course('ui/ux','6months',100000);
    $l1->setAdm_no(7865);
@@ -265,6 +288,9 @@ class Saccos{
                 $this->owner=$owner;
 
             }
+            public function getOwner(){
+                return $this->owner;
+            }
 
 
   
@@ -278,6 +304,7 @@ $sc1->setOwner('kevin mwangi');
 echo'<pre>';
 var_dump($sc1);
 echo'</pre>';
+echo $sc1->getOwner();
 
 // $sc1->name='twin star';
 // $sc1->route='kabete';
@@ -311,6 +338,10 @@ class Iphone{
         $this ->serial_no=$serial_no;
        }
 
+       public function getSerial_no(){
+       return $this->serial_no;
+    }
+
 
     }
 
@@ -322,6 +353,7 @@ $ip->setSerial_no('1234wgytdf');
 echo'<br>';
 var_dump ($ip);
 echo'</br>';
+echo $ip->getSerial_no();
 
 // $ip->name="Iphone x";
 // $ip->year_of_release = "2018";
@@ -369,7 +401,9 @@ private $finance;
    {
         $this->finance=$finance;
    }
-    
+    public function getFinance(){
+        return $this->finance;
+    }
     }
 
 $m=new Movie("avengers:endgame","action","96 million",);
@@ -377,6 +411,7 @@ $m->setFinace('2000000usd');
 echo '<pre>';
 var_dump($m);
 echo '</pre>';
+echo $m->getFinance();
 // $m-> name ="Avengers: Endgame ";
 // $m-> category='action';
 // $m -> views='96 million';
@@ -387,7 +422,7 @@ echo '</pre>';
 
 
 
-class drinks{
+class Drinks{
      
     public $tea;
     public $cofee;
@@ -402,13 +437,19 @@ public function __construct($tea,$cofee,$porridge)
     $this->cofee=$cofee;
     $this->porridge=$porridge;
 }
-    public function setIngredients($ingredients){
+    public function setIngredients($ingredients)
+    {
 
 
         $this->ingredients=$ingredients;
     
 }
+public function getIngredients()
+{
+    return $this->ingredients;
+}
 }
 
-$d=new drinks('tea','cofee','porridge');
+$d=new Drinks('tea','cofee','porridge');
 $d->setIngredients('water','leaves');
+echo $d->getIngredients();
