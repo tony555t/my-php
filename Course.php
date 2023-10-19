@@ -22,3 +22,4 @@ public function getAdm_no(){
     return $this ->adm_no;
 }
     }
+  

@@ -15,3 +15,4 @@ class Student extends Person
     parent::__construct($name,$surname);
  }
 }
+?>

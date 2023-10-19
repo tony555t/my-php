@@ -1,5 +1,5 @@
 <?php
- 
+
 class Person {
     public   string $name;
      public string $surname;
@@ -13,7 +13,8 @@ class Person {
        $this->surname=$surname;
        self::$counter++;
       }
-public function setAge($age){
+public function setAge($age)
+{
         $this->age=$age;
     }
     public function getAge(){
@@ -24,6 +25,7 @@ public function setAge($age){
       return self::$counter;
    }
 }
+
 
 //  //Creating a new instance/object
 //  $p1 = new Person('antony','tula');
